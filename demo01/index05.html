@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="../build/react.js" charset="utf-8"></script>
+    <script src="../build/react-dom.js" charset="utf-8"></script>
+    <script src="../build/browser.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var NotesList=React.createClass({
+        render: function(){
+          return(
+            <ol>
+              {
+                React.Children.map(this.props.children,function  (child){
+                  return <li>{child}</li>
+                })
+              }
+            </ol>
+          );
+        }
+      });
+      ReactDOM.render(
+        <NotesList>
+          <span>hello</span>
+          <span>world</span>
+          <span>my</span>
+          <span>name</span>
+          <span>mr</span>
+          <span>wong</span>
+        </NotesList>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
