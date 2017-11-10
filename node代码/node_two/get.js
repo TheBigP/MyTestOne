@@ -72,24 +72,25 @@
 /*
 创建web服务器
 */
-// var http = require('http');
-// var fs=require('fs');
-// var url=require('url');
-// http.createServer(function(request,response){
-//   var pathname=url.parse(request.url).pathname;
-//   console.log("请求的文件名:"+pathname);
-//   fs.readFile(pathname.substr(1),function(err,data){
-//     if(err){
-//       console.log(err);
-//       response.writeHead(404,{'Content-Type': 'text/html; charset=utf-8'});
-//     }else{
-//       response.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'});
-//       response.write(data.toString());
-//     }
-//     response.end();
-//   });
-// }).listen(8081);
-// console.log('Server running at http://127.0.0.1:8081/');
+var http = require('http');
+var fs=require('fs');
+var url=require('url');
+http.createServer(function(request,response){
+  var pathname=url.parse(request.url).pathname;
+  console.log("请求的文件名:"+pathname);
+  console.log("pathname.substr(1)的内容是什么？？？"+pathname.substr(1));
+  fs.readFile(pathname.substr(1),function(err,data){
+    if(err){
+      console.log(err);
+      response.writeHead(404,{'Content-Type': 'text/html; charset=utf-8'});
+    }else{
+      response.writeHead(200,{'Content-Type': 'text/html; charset=utf-8'});
+      response.write(data.toString());
+    }
+    response.end();
+  });
+}).listen(8081);
+console.log('Server running at http://127.0.0.1:8081/');
 
 /*
 用node创建web客户端
@@ -112,28 +113,28 @@
 // var req=http.request(options,callback);
 // req.end();
 
-var http = require('http');
-
-// 用于请求的选项
-var options = {
-   host: 'localhost',
-   port: '8089',
-   path: '/index.htm'
-};
-
-// 处理响应的回调函数
-var callback = function(response){
-   // 不断更新数据
-   var body = '';
-   response.on('data', function(data) {
-      body += data;
-   });
-
-   response.on('end', function() {
-      // 数据接收完成
-      console.log(body);
-   });
-}
-// 向服务端发送请求
-var req = http.request(options, callback);
-req.end();
+// var http = require('http');
+//
+// // 用于请求的选项
+// var options = {
+//    host: 'localhost',
+//    port: '8089',
+//    path: '/index.htm'
+// };
+//
+// // 处理响应的回调函数
+// var callback = function(response){
+//    // 不断更新数据
+//    var body = '';
+//    response.on('data', function(data) {
+//       body += data;
+//    });
+//
+//    response.on('end', function() {
+//       // 数据接收完成
+//       console.log(body);
+//    });
+// }
+// // 向服务端发送请求
+// var req = http.request(options, callback);
+// req.end();
