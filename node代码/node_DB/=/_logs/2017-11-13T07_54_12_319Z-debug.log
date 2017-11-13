@@ -1,0 +1,287 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'uninstall',
+1 verbose cli   '-g',
+1 verbose cli   'express' ]
+2 info using npm@5.0.3
+3 info using node@v8.1.3
+4 verbose npm-session a5059b51b5f8b6d7
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly install loadIdealTree
+8 silly install cloneCurrentTreeToIdealTree
+9 silly install loadShrinkwrap
+10 silly uninstall loadAllDepsIntoIdealTree
+11 silly install loadAllDepsIntoIdealTree
+12 http fetch GET 200 https://registry.npmjs.org/debug 690ms
+13 http fetch GET 200 https://registry.npmjs.org/serve-favicon 697ms
+14 http fetch GET 200 https://registry.npmjs.org/morgan 699ms
+15 http fetch GET 200 https://registry.npmjs.org/cookie-parser 702ms
+16 http fetch GET 200 https://registry.npmjs.org/body-parser 708ms
+17 http fetch GET 200 https://registry.npmjs.org/jade 714ms
+18 silly pacote range manifest for debug@~2.6.9 fetched in 730ms
+19 silly pacote range manifest for morgan@~1.9.0 fetched in 733ms
+20 silly pacote range manifest for serve-favicon@~2.4.5 fetched in 733ms
+21 silly pacote range manifest for body-parser@~1.18.2 fetched in 765ms
+22 silly pacote range manifest for cookie-parser@~1.4.3 fetched in 742ms
+23 silly pacote range manifest for jade@~1.11.0 fetched in 748ms
+24 warn deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+25 http fetch GET 200 https://registry.npmjs.org/express 759ms
+26 silly pacote version manifest for debug@2.6.9 fetched in 40ms
+27 silly fetchPackageMetaData error for safe-buffer@5.1.1 F:\mygittest\mygit\node代码\node_DB\=\_cacache is not a legal HTTP header value
+28 silly pacote range manifest for express@~4.15.5 fetched in 787ms
+29 http fetch GET 200 https://registry.npmjs.org/ms 100ms
+30 http fetch GET 200 https://registry.npmjs.org/on-finished 99ms
+31 http fetch GET 200 https://registry.npmjs.org/basic-auth 101ms
+32 http fetch GET 200 https://registry.npmjs.org/fresh 100ms
+33 http fetch GET 200 https://registry.npmjs.org/on-headers 103ms
+34 http fetch GET 200 https://registry.npmjs.org/etag 103ms
+35 http fetch GET 200 https://registry.npmjs.org/depd 103ms
+36 silly pacote version manifest for ms@2.0.0 fetched in 114ms
+37 silly pacote version manifest for debug@2.6.9 fetched in 2ms
+38 silly pacote range manifest for on-finished@~2.3.0 fetched in 113ms
+39 silly pacote range manifest for on-headers@~1.0.1 fetched in 116ms
+40 silly pacote range manifest for basic-auth@~2.0.0 fetched in 118ms
+41 silly pacote range manifest for etag@~1.8.1 fetched in 120ms
+42 silly pacote version manifest for fresh@0.5.2 fetched in 119ms
+43 silly pacote range manifest for depd@~1.1.1 fetched in 125ms
+44 silly pacote range manifest for on-finished@~2.3.0 fetched in 9ms
+45 http fetch GET 200 https://registry.npmjs.org/http-errors 84ms
+46 silly pacote range manifest for http-errors@~1.6.2 fetched in 100ms
+47 http fetch GET 200 https://registry.npmjs.org/iconv-lite 101ms
+48 http fetch GET 200 https://registry.npmjs.org/cookie-signature 98ms
+49 http fetch GET 200 https://registry.npmjs.org/type-is 100ms
+50 http fetch GET 200 https://registry.npmjs.org/qs 106ms
+51 http fetch GET 200 https://registry.npmjs.org/cookie 101ms
+52 silly pacote version manifest for iconv-lite@0.4.19 fetched in 112ms
+53 http fetch GET 200 https://registry.npmjs.org/raw-body 111ms
+54 silly pacote version manifest for cookie-signature@1.0.6 fetched in 111ms
+55 silly pacote version manifest for qs@6.5.1 fetched in 119ms
+56 silly pacote range manifest for type-is@~1.6.15 fetched in 116ms
+57 silly pacote version manifest for cookie@0.3.1 fetched in 116ms
+58 silly pacote version manifest for raw-body@2.3.2 fetched in 126ms
+59 http fetch GET 200 https://registry.npmjs.org/parseurl 250ms
+60 silly pacote range manifest for parseurl@~1.3.2 fetched in 254ms
+61 http fetch GET 200 https://registry.npmjs.org/bytes 236ms
+62 silly pacote version manifest for bytes@3.0.0 fetched in 239ms
+63 http fetch GET 200 https://registry.npmjs.org/content-type 242ms
+64 silly pacote range manifest for content-type@~1.0.4 fetched in 249ms
+65 http fetch GET 200 https://registry.npmjs.org/character-parser 84ms
+66 silly pacote version manifest for character-parser@1.2.1 fetched in 88ms
+67 http fetch GET 200 https://registry.npmjs.org/commander 88ms
+68 silly pacote range manifest for commander@~2.6.0 fetched in 98ms
+69 http fetch GET 200 https://registry.npmjs.org/clean-css 107ms
+70 http fetch GET 200 https://registry.npmjs.org/mkdirp 111ms
+71 http fetch GET 200 https://registry.npmjs.org/jstransformer 115ms
+72 http fetch GET 200 https://registry.npmjs.org/constantinople 120ms
+73 silly pacote range manifest for clean-css@^3.1.9 fetched in 134ms
+74 http fetch GET 200 https://registry.npmjs.org/transformers 117ms
+75 http fetch GET 200 https://registry.npmjs.org/uglify-js 113ms
+76 silly pacote range manifest for constantinople@~3.0.1 fetched in 163ms
+77 silly pacote range manifest for mkdirp@~0.5.0 fetched in 160ms
+78 silly pacote version manifest for jstransformer@0.0.2 fetched in 162ms
+79 http fetch GET 200 https://registry.npmjs.org/void-elements 125ms
+80 silly pacote range manifest for content-type@~1.0.2 fetched in 8ms
+81 silly pacote version manifest for transformers@2.1.0 fetched in 163ms
+82 warn deprecated transformers@2.1.0: Deprecated, use jstransformer
+83 http fetch GET 200 https://registry.npmjs.org/with 121ms
+84 silly pacote range manifest for etag@~1.8.0 fetched in 4ms
+85 http fetch GET 200 https://registry.npmjs.org/accepts 117ms
+86 silly pacote range manifest for uglify-js@^2.4.19 fetched in 153ms
+87 silly pacote range manifest for void-elements@~2.0.1 fetched in 144ms
+88 silly pacote range manifest for parseurl@~1.3.1 fetched in 1ms
+89 silly pacote range manifest for with@~4.0.0 fetched in 138ms
+90 silly pacote range manifest for accepts@~1.3.3 fetched in 138ms
+91 http fetch GET 200 https://registry.npmjs.org/array-flatten 105ms
+92 silly pacote version manifest for qs@6.5.0 fetched in 5ms
+93 silly pacote version manifest for array-flatten@1.1.1 fetched in 108ms
+94 http fetch GET 200 https://registry.npmjs.org/content-disposition 87ms
+95 silly pacote version manifest for content-disposition@0.5.2 fetched in 91ms
+96 http fetch GET 200 https://registry.npmjs.org/encodeurl 85ms
+97 http fetch GET 200 https://registry.npmjs.org/escape-html 85ms
+98 silly pacote range manifest for encodeurl@~1.0.1 fetched in 90ms
+99 silly pacote range manifest for escape-html@~1.0.3 fetched in 98ms
+100 http fetch GET 200 https://registry.npmjs.org/finalhandler 99ms
+101 http fetch GET 200 https://registry.npmjs.org/merge-descriptors 109ms
+102 http fetch GET 200 https://registry.npmjs.org/methods 110ms
+103 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 107ms
+104 silly pacote range manifest for finalhandler@~1.0.6 fetched in 124ms
+105 http fetch GET 200 https://registry.npmjs.org/proxy-addr 106ms
+106 http fetch GET 200 https://registry.npmjs.org/range-parser 100ms
+107 silly pacote version manifest for merge-descriptors@1.0.1 fetched in 127ms
+108 silly pacote range manifest for methods@~1.1.2 fetched in 127ms
+109 http fetch GET 200 https://registry.npmjs.org/send 103ms
+110 silly pacote version manifest for path-to-regexp@0.1.7 fetched in 122ms
+111 http fetch GET 200 https://registry.npmjs.org/serve-static 97ms
+112 silly pacote range manifest for proxy-addr@~1.1.5 fetched in 120ms
+113 silly fetchPackageMetaData error for inherits@2.0.3 F:\mygittest\mygit\node代码\node_DB\=\_cacache is not a legal HTTP header value
+114 silly pacote range manifest for range-parser@~1.2.0 fetched in 115ms
+115 silly pacote version manifest for send@0.15.6 fetched in 115ms
+116 silly pacote version manifest for serve-static@1.12.6 fetched in 107ms
+117 silly pacote version manifest for depd@1.1.1 fetched in 13ms
+118 silly pacote version manifest for http-errors@1.6.2 fetched in 4ms
+119 silly pacote range manifest for commander@2.8.x fetched in 4ms
+120 http fetch GET 200 https://registry.npmjs.org/setprototypeof 84ms
+121 silly pacote version manifest for setprototypeof@1.0.3 fetched in 87ms
+122 http fetch GET 200 https://registry.npmjs.org/statuses 85ms
+123 silly pacote range manifest for statuses@~1.3.1 fetched in 89ms
+124 http fetch GET 200 https://registry.npmjs.org/utils-merge 87ms
+125 silly pacote version manifest for utils-merge@1.0.0 fetched in 94ms
+126 http fetch GET 200 https://registry.npmjs.org/vary 86ms
+127 http fetch GET 200 https://registry.npmjs.org/ee-first 86ms
+128 silly pacote range manifest for vary@~1.1.1 fetched in 95ms
+129 http fetch GET 200 https://registry.npmjs.org/statuses 84ms
+130 silly pacote version manifest for ee-first@1.1.1 fetched in 95ms
+131 http fetch GET 200 https://registry.npmjs.org/media-typer 88ms
+132 silly pacote range manifest for statuses@>= 1.3.1 < 2 fetched in 92ms
+133 http fetch GET 200 https://registry.npmjs.org/mime-types 88ms
+134 silly pacote version manifest for media-typer@0.3.0 fetched in 97ms
+135 silly pacote range manifest for mime-types@~2.1.15 fetched in 104ms
+136 http fetch GET 200 https://registry.npmjs.org/source-map 99ms
+137 silly pacote range manifest for uglify-js@~2.2.5 fetched in 18ms
+138 http fetch GET 200 https://registry.npmjs.org/acorn 97ms
+139 silly pacote range manifest for source-map@0.4.x fetched in 111ms
+140 silly pacote range manifest for acorn@^2.1.0 fetched in 104ms
+141 http fetch GET 200 https://registry.npmjs.org/minimist 94ms
+142 silly pacote version manifest for minimist@0.0.8 fetched in 99ms
+143 silly pacote range manifest for acorn@^1.0.1 fetched in 6ms
+144 silly pacote range manifest for mime-types@~2.1.16 fetched in 1ms
+145 http fetch GET 200 https://registry.npmjs.org/unpipe 145ms
+146 silly pacote version manifest for unpipe@1.0.0 fetched in 149ms
+147 http fetch GET 200 https://registry.npmjs.org/is-promise 83ms
+148 silly pacote range manifest for unpipe@~1.0.0 fetched in 5ms
+149 silly pacote range manifest for is-promise@^2.0.0 fetched in 90ms
+150 http fetch GET 200 https://registry.npmjs.org/promise 91ms
+151 http fetch GET 200 https://registry.npmjs.org/css 86ms
+152 silly pacote range manifest for promise@^6.0.1 fetched in 102ms
+153 http fetch GET 200 https://registry.npmjs.org/promise 142ms
+154 silly pacote range manifest for css@~1.0.8 fetched in 138ms
+155 http fetch GET 200 https://registry.npmjs.org/source-map 130ms
+156 http fetch GET 200 https://registry.npmjs.org/uglify-to-browserify 121ms
+157 silly pacote range manifest for promise@~2.0 fetched in 164ms
+158 http fetch GET 200 https://registry.npmjs.org/negotiator 115ms
+159 http fetch GET 200 https://registry.npmjs.org/acorn-globals 120ms
+160 http fetch GET 200 https://registry.npmjs.org/yargs 140ms
+161 http fetch GET 200 https://registry.npmjs.org/forwarded 102ms
+162 silly pacote range manifest for source-map@~0.5.1 fetched in 153ms
+163 silly pacote version manifest for negotiator@0.6.1 fetched in 140ms
+164 silly pacote range manifest for uglify-to-browserify@~1.0.0 fetched in 153ms
+165 http fetch GET 200 https://registry.npmjs.org/ipaddr.js 116ms
+166 silly pacote range manifest for acorn-globals@^1.0.3 fetched in 148ms
+167 silly pacote range manifest for forwarded@~0.1.0 fetched in 125ms
+168 silly pacote range manifest for yargs@~3.10.0 fetched in 168ms
+169 http fetch GET 200 https://registry.npmjs.org/destroy 101ms
+170 silly pacote range manifest for source-map@~0.1.7 fetched in 12ms
+171 silly pacote version manifest for ipaddr.js@1.4.0 fetched in 128ms
+172 silly pacote range manifest for destroy@~1.0.4 fetched in 108ms
+173 silly pacote range manifest for is-promise@~1 fetched in 4ms
+174 http fetch GET 200 https://registry.npmjs.org/mime 82ms
+175 silly pacote version manifest for mime@1.3.4 fetched in 85ms
+176 http fetch GET 200 https://registry.npmjs.org/graceful-readlink 80ms
+177 silly pacote range manifest for graceful-readlink@>= 1.0.0 fetched in 83ms
+178 http fetch GET 200 https://registry.npmjs.org/mime-db 83ms
+179 silly pacote range manifest for mime-db@~1.30.0 fetched in 88ms
+180 http fetch GET 200 https://registry.npmjs.org/optimist 81ms
+181 silly pacote range manifest for optimist@~0.3.5 fetched in 91ms
+182 http fetch GET 200 https://registry.npmjs.org/amdefine 90ms
+183 http fetch GET 200 https://registry.npmjs.org/css-parse 90ms
+184 http fetch GET 200 https://registry.npmjs.org/asap 91ms
+185 http fetch GET 200 https://registry.npmjs.org/css-stringify 92ms
+186 http fetch GET 200 https://registry.npmjs.org/camelcase 92ms
+187 silly pacote range manifest for asap@~1.0.0 fetched in 102ms
+188 silly pacote version manifest for css-parse@1.0.4 fetched in 102ms
+189 http fetch GET 200 https://registry.npmjs.org/cliui 90ms
+190 silly pacote range manifest for amdefine@>=0.0.4 fetched in 106ms
+191 silly pacote version manifest for css-stringify@1.0.5 fetched in 100ms
+192 silly pacote range manifest for cliui@^2.1.0 fetched in 95ms
+193 silly pacote range manifest for camelcase@^1.0.2 fetched in 99ms
+194 http fetch GET 200 https://registry.npmjs.org/decamelize 82ms
+195 silly pacote range manifest for decamelize@^1.0.0 fetched in 85ms
+196 http fetch GET 200 https://registry.npmjs.org/window-size 84ms
+197 silly pacote version manifest for window-size@0.1.0 fetched in 88ms
+198 http fetch GET 200 https://registry.npmjs.org/wordwrap 82ms
+199 silly pacote range manifest for wordwrap@~0.0.2 fetched in 86ms
+200 http fetch GET 200 https://registry.npmjs.org/wordwrap 83ms
+201 http fetch GET 200 https://registry.npmjs.org/center-align 84ms
+202 http fetch GET 200 https://registry.npmjs.org/right-align 88ms
+203 silly pacote version manifest for wordwrap@0.0.2 fetched in 92ms
+204 silly pacote range manifest for center-align@^0.1.1 fetched in 92ms
+205 silly pacote range manifest for right-align@^0.1.1 fetched in 94ms
+206 http fetch GET 200 https://registry.npmjs.org/align-text 85ms
+207 http fetch GET 200 https://registry.npmjs.org/align-text 85ms
+208 http fetch GET 200 https://registry.npmjs.org/lazy-cache 89ms
+209 silly pacote range manifest for align-text@^0.1.3 fetched in 93ms
+210 silly pacote range manifest for align-text@^0.1.1 fetched in 93ms
+211 silly pacote range manifest for lazy-cache@^1.0.3 fetched in 97ms
+212 http fetch GET 200 https://registry.npmjs.org/repeat-string 83ms
+213 http fetch GET 200 https://registry.npmjs.org/longest 85ms
+214 http fetch GET 200 https://registry.npmjs.org/kind-of 85ms
+215 silly pacote range manifest for repeat-string@^1.5.2 fetched in 89ms
+216 silly pacote range manifest for kind-of@^3.0.2 fetched in 90ms
+217 silly pacote range manifest for longest@^1.0.1 fetched in 91ms
+218 http fetch GET 200 https://registry.npmjs.org/is-buffer 82ms
+219 silly pacote range manifest for is-buffer@^1.1.5 fetched in 86ms
+220 silly pacote range manifest for express@~4.15.5 fetched in 8ms
+221 silly resolveWithNewModule express@4.15.5 checking installable status
+222 silly pacote range manifest for cookie-parser@~1.4.3 fetched in 12ms
+223 silly resolveWithNewModule cookie-parser@1.4.3 checking installable status
+224 silly pacote range manifest for body-parser@~1.18.2 fetched in 13ms
+225 silly resolveWithNewModule body-parser@1.18.2 checking installable status
+226 silly pacote range manifest for debug@~2.6.9 fetched in 15ms
+227 silly resolveWithNewModule debug@2.6.9 checking installable status
+228 silly pacote range manifest for serve-favicon@~2.4.5 fetched in 16ms
+229 silly resolveWithNewModule serve-favicon@2.4.5 checking installable status
+230 silly pacote range manifest for jade@~1.11.0 fetched in 17ms
+231 silly resolveWithNewModule jade@1.11.0 checking installable status
+232 silly pacote range manifest for morgan@~1.9.0 fetched in 17ms
+233 silly resolveWithNewModule morgan@1.9.0 checking installable status
+234 silly pacote version manifest for bytes@3.0.0 fetched in 2ms
+235 silly resolveWithNewModule bytes@3.0.0 checking installable status
+236 silly pacote range manifest for content-type@~1.0.4 fetched in 3ms
+237 silly resolveWithNewModule content-type@1.0.4 checking installable status
+238 silly pacote range manifest for http-errors@~1.6.2 fetched in 4ms
+239 silly resolveWithNewModule http-errors@1.6.2 checking installable status
+240 silly pacote range manifest for on-finished@~2.3.0 fetched in 4ms
+241 silly resolveWithNewModule on-finished@2.3.0 checking installable status
+242 silly pacote range manifest for depd@~1.1.1 fetched in 5ms
+243 silly resolveWithNewModule depd@1.1.1 checking installable status
+244 silly pacote version manifest for raw-body@2.3.2 fetched in 5ms
+245 silly resolveWithNewModule raw-body@2.3.2 checking installable status
+246 silly pacote version manifest for iconv-lite@0.4.19 fetched in 5ms
+247 silly resolveWithNewModule iconv-lite@0.4.19 checking installable status
+248 silly pacote version manifest for qs@6.5.1 fetched in 6ms
+249 silly resolveWithNewModule qs@6.5.1 checking installable status
+250 silly pacote range manifest for type-is@~1.6.15 fetched in 7ms
+251 silly resolveWithNewModule type-is@1.6.15 checking installable status
+252 silly pacote version manifest for ms@2.0.0 fetched in 2ms
+253 silly resolveWithNewModule ms@2.0.0 checking installable status
+254 silly pacote version manifest for setprototypeof@1.0.3 fetched in 3ms
+255 silly resolveWithNewModule setprototypeof@1.0.3 checking installable status
+256 silly pacote range manifest for statuses@>= 1.3.1 < 2 fetched in 4ms
+257 silly resolveWithNewModule statuses@1.4.0 checking installable status
+258 silly fetchPackageMetaData error for inherits@2.0.3 F:\mygittest\mygit\node代码\node_DB\=\_cacache is not a legal HTTP header value
+259 verbose stack TypeError: F:\mygittest\mygit\node代码\node_DB\=\_cacache is not a legal HTTP header value
+259 verbose stack     at sanitizeValue (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\node_modules\make-fetch-happen\node_modules\node-fetch-npm\src\headers.js:24:11)
+259 verbose stack     at Headers.set (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\node_modules\make-fetch-happen\node_modules\node-fetch-npm\src\headers.js:141:38)
+259 verbose stack     at addCacheHeaders (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\node_modules\make-fetch-happen\cache.js:253:14)
+259 verbose stack     at cacache.get.info.then.then.info (C:\Program Files\nodejs\node_modules\npm\node_modules\pacote\node_modules\make-fetch-happen\cache.js:57:9)
+259 verbose stack     at tryCatcher (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\util.js:16:23)
+259 verbose stack     at Promise._settlePromiseFromHandler (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:512:31)
+259 verbose stack     at Promise._settlePromise (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:569:18)
+259 verbose stack     at Promise._settlePromise0 (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:614:10)
+259 verbose stack     at Promise._settlePromises (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:693:18)
+259 verbose stack     at Promise._fulfill (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:638:18)
+259 verbose stack     at Promise._resolveCallback (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:432:57)
+259 verbose stack     at Promise._settlePromiseFromHandler (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:524:17)
+259 verbose stack     at Promise._settlePromise (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:569:18)
+259 verbose stack     at Promise._settlePromise0 (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:614:10)
+259 verbose stack     at Promise._settlePromises (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:693:18)
+259 verbose stack     at Promise._fulfill (C:\Program Files\nodejs\node_modules\npm\node_modules\bluebird\js\release\promise.js:638:18)
+260 verbose cwd F:\mygittest\mygit\node代码\node_DB
+261 verbose Windows_NT 10.0.10586
+262 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "uninstall" "-g" "express"
+263 verbose node v8.1.3
+264 verbose npm  v5.0.3
+265 error F:\mygittest\mygit\node代码\node_DB\=\_cacache is not a legal HTTP header value
+266 verbose exit [ 1, true ]
