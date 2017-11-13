@@ -78,9 +78,7 @@ router.post("/update",function(req,res,next){
     var title = req.body.title;
     var to_date = req.body.to_date;
 
-    var sql = "update email set name = '"+ name +"',email_user = '"+ email_user +
-    "',email_touser = '"+ email_touser +"',content = '"+ content +
-    "',title = '"+ title +"',to_date = '"+ to_date +"' where id = " + id;
+    var sql = "update email set name = '"+ name +"',email_user = '"+ email_user +"',email_touser = '"+ email_touser +"',content = '"+ content +"',title = '"+ title +"',to_date = '"+ to_date +"' where id = " + id;
     console.log(sql);
     db.query(sql,function(err,rows){
         if(err){
