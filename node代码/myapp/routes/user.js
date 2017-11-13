@@ -9,9 +9,9 @@ var db = require("../config/db");
 router.get("/",function(req,res,next){
     db.query("select * from email",function(err,rows){
         if(err){
-            res.render("email",{title:"用户列表",datas:[]});
+            res.render("users",{title:"用户列表",datas:[]});
         }else {
-            res.render("email",{title:"用户列表",datas:rows});
+            res.render("users",{title:"用户列表",datas:rows});
         }
     });
 });
@@ -30,7 +30,7 @@ router.post("/add",function(req,res,next){
     var content = req.body.content;
     var title = req.body.title;
     var to_date = req.body.to_date;
-    db.query("insert into email(id,name,email_user,email_touser,content,title,to_date) values('"+id+"','"+ name +"','"+ email_user +"','"+ email_touser +"','"+ content +"',,'"+ title +"',,'"+ to_date +"')",function(err,rows){
+    db.query("insert into email(id,name,email_user,email_touser,content,title,to_date) values('"+id+"','"+ name +"','"+ email_user +"','"+ email_touser +"','"+ content +"','"+ title +"','"+ to_date +"')",function(err,rows){
         if(err){
             res.send("新增失败"+err);
         }else {
