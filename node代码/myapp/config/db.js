@@ -10,6 +10,7 @@ function query(sql,callback){
     pool.getConnection(function(err,connection){
         connection.query(sql, function (err,rows) {
             callback(err,rows);
+            //连接释放
             connection.release();
         });
     });
