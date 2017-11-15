@@ -12,6 +12,11 @@ var index = require('./routes/index');
 var users = require('./routes/user');
 
 var app = express();
+/*
+测试bootstrap
+first
+*/
+app.use("/lib",express.static(path.join(__dirname, 'node_modules')));
 
 
 // view engine setup
