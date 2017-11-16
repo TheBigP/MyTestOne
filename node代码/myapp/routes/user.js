@@ -1,7 +1,47 @@
 var express = require('express');
+
 var router = express.Router();
+/*文件上传*/
+var fs = require('fs');
+var multer  = require('multer')
+var upload = multer({ dest: 'upload/' });
+const path = require('path');
+var app = express();
 
 var db = require("../config/db");
+/**
+文件上传
+*/
+router.post('/add',upload.single('other'),function(req,res,next){
+  console.log("到底走没走啊！！！！！！！");
+  var file= req.body.other;
+//以下代码得到文件后缀
+console.log(file);
+ var nameArray=file.split('.');
+ console.log(nameArray);
+ var nameMime=[];
+ l=nameArray.pop();
+ nameMime.unshift(l);
+ while(nameArray.length!=0&&l!='.'){
+ l=nameArray.pop();
+ nameMime.unshift(l);
+ }
+//Mime是文件的后缀
+ Mime=nameMime.join('');
+ console.log(Mime);
+ // res.send("done");
+//重命名文件 加上文件后缀
+console.log('./upload/'+"*******************"+file);
+console.log("-----------------------------");
+console.log('./upload/'+"++++++++++++++++++++"+file+Mime);
+ // fs.renameSync('./upload/'+file.filename,'./upload/'+file.filename+Mime);
+ //跨磁盘分区移动 问题 
+ fs.renameSync('C:/Users/Administrator.PC-201608221601/Pictures/GYM/'+file,'C:/Users/Administrator.PC-201608221601/Pictures/PlayStation/'+file);
+
+});
+
+
+
 
 /**
  * 查询列表页
@@ -30,13 +70,15 @@ router.post("/add",function(req,res,next){
     var content = req.body.content;
     var title = req.body.title;
     var to_date = req.body.to_date;
-    db.query("insert into email(id,name,email_user,email_touser,content,title,to_date) values('"+id+"','"+ name +"','"+ email_user +"','"+ email_touser +"','"+ content +"','"+ title +"','"+ to_date +"')",function(err,rows){
+    var other = req.body.other;
+    db.query("insert into email(id,name,email_user,email_touser,content,title,to_date,other) values('"+id+"','"+ name +"','"+ email_user +"','"+ email_touser +"','"+ content +"','"+ title +"','"+ to_date +"','"+ other +"')",function(err,rows){
         if(err){
             res.send("新增失败"+err);
         }else {
             res.redirect("/users");
         }
     });
+
 });
 
 /**

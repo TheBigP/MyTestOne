@@ -3,18 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>新增页面</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/users.css' />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-<form action="/users/add" method="post">
-    编号：<input type="text" name="id"><br>
-    姓名：<input type="text" name="name"><br>
-    发件人：<input type="text" name="email_user"><br>
-    收件人：<input type="text" name="email_touser"><br>
-    内容：<input type="text" name="content"><br>
-    标题：<input type="text" name="title"><br>
-    发送日期：<input type="text" name="to_date"><br>
-    <input type="submit" value="提交">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron">
+          <h1>Hello, My personal Email!</h1>
+          <p>一个简单的数据的增删改查</p>
+      </div>
+    </div>
+  </div>
+
+  <form action="/users/search" method="post" class="form-inline">
+      <div class="form-group has-success has-feedback ">
+          <label for="exampleInputName2"><em>姓名：</em></label>
+          <input type="text" class="form-control" id="inputSuccess2" placeholder="Jane Doe" name="s_name" >
+          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+          <span id="inputSuccess2Status" class="sr-only">(success)</span>
+      </div>
+      <div class="checkbox">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+      <input type="submit" value="查询" class="btn btn-default">
+  </form>
+
+<form action="/users/add" method="post" class="form-horizontal" enctype=”multipart/form-data”>
+  <div class="form-group">
+     <label for="inputEmail3" class="col-sm-2 control-label">编号：</label>
+     <div class="col-sm-10">
+       <input type="text" name="id" class="form-control" placeholder="数字编号">
+     </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">姓名：</label>
+    <div class="col-sm-10">
+      <input type="text" name="name" class="form-control" placeholder="用户姓名">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">发件人：</label>
+    <div class="col-sm-10">
+      <input type="text" name="email_user" class="form-control" placeholder="发件人">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">收件人：</label>
+    <div class="col-sm-10">
+      <input type="text" name="email_touser" class="form-control" placeholder="收件人">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">内容：</label>
+    <div class="col-sm-10">
+      <input type="text" name="content" class="form-control" placeholder="邮件内容">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">标题：</label>
+    <div class="col-sm-10">
+        <input type="text" name="title" class="form-control" placeholder="邮件标题">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">发送日期：</label>
+    <div class="col-sm-10">
+      <input type="text" name="to_date" class="form-control" placeholder="日期">
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" for="col-sm-2 control-label" style="margin-left:250px;margin-top:20px">上传附件</label>
+    <input type="file" name="other" id="exampleInputFile" class="btn btn-primary" style="margin-left:250px">
+  </div>
+    <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" value="提交" class="btn btn-default">
+    </div>
 </form>
+<blockquote class="blockquote-reverse">
+  <address>
+    <strong>Twitter, Inc.</strong><br>
+      17 YangShu Street, Suite 203<br>
+        Dalian Liaoning,  China<br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+  </address>
+  <address>
+    <strong>TheBigP</strong><br>
+    <a href="mailto:#">first-test@163.com</a>
+  </address>
+  <footer>Author is  <cite title="Source Title">  Wang</cite></footer>
+
+</blockquote>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

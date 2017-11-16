@@ -35,7 +35,7 @@ console.log("**************************************");
 console.log(express.static(path.join(__dirname, 'public')));
 console.log("**************************************");
 //配置路由，（'自定义路径'，上面设置的接口地址）
-app.use('/', index);
+app.use('/aaa', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
