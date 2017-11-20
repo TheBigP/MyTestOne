@@ -63,8 +63,8 @@
             <td><%= datas[i].content %></td>
             <td><%= datas[i].title %></td>
             <td><%= datas[i].to_date %></td>
-            <td><%= datas[i].other %></td>
-            
+            <td><a href="/users/download?key=other"><%= datas[i].other %></a></td>
+
             <td><a href="/users/add" class="btn btn-info">添加</a></td>
             <td><a href="/users/del/<%= datas[i].id %>" class="btn btn-danger">删除</a></td>
             <td><a href="/users/toUpdate/<%= datas[i].id %>" class="btn btn-warning">修改</a></td>
