@@ -9,6 +9,9 @@ const path = require('path');
 var app = express();
 
 var db = require("../config/db");
+
+//email
+var nodemailer=require('nodemailer');
 /**
 *download
 */
@@ -16,6 +19,83 @@ var url = require('url');
 var http = require('http');
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
+//发送邮件
+// router.get("/addEmail",function(req,res,next){
+//   res.render("add");
+// });
+
+router.post("/addEmail",upload.single('other'),function(req,res,next){
+  var id=req.body.id;
+  var name=req.body.name;
+  var email_user=req.body.email_user;
+  var email_touser=req.body.email_touser;
+  var content=req.body.content;
+  var title=req.body.title;
+  var to_date=req.body.to_date;
+  var other = req.body.other;
+
+  /**
+  文件上传
+  */
+
+  //  fs.renameSync('F:/创世战车/'+other,'F:/mygittest/mygit/node代码/myapp/upload/'+other);
+  var transporter = nodemailer.createTransport({
+  service: 'qq',
+  auth: {
+    user: '2571019688@qq.com',
+    pass: 'lhvuafxsxlzudjda' //授权码,通过QQ获取
+  }
+  });
+
+
+  var mailOptions = {
+    from: '2571019688@qq.com', // 发送者
+    to: email_touser, // 接受者,可以同时发送多个,以逗号隔开
+    // bcc:'bcc@163.com',密送邮件
+    subject: title, // 标题
+    text: 'Hello world', // 文本
+    html: '<b>Hello world ✔</b><br/>Embedded image: <img src="cid:00000001"/>',
+    //附件添加
+    // console.log(__dirname);
+    attachments:[
+    {
+        filename: other,
+        path: path,
+        cid:'00000001'
+      }
+    ]
+
+
+  };
+  transporter.sendMail(mailOptions, function (err, info) {
+    if (err) {
+      console.log(err);
+      return;
+    }else{
+      if(id==null){
+        res.send("新增失败"+err);
+      }
+      db.query("insert into email(id,name,email_user,email_touser,content,title,to_date,other) values('"+id+"','"+ name +"','"+ email_user +"','"+ email_touser +"','"+ content +"','"+ title +"','"+ to_date +"','"+ other +"')",function(err,rows){
+        if(err){
+          res.send("新增失败"+err);
+        }else{
+          db.query("select * from email",function(err,rows){
+            if(err){
+              res.render("users",{title:"用户列表",datas:[]});
+            }else{
+              var name='发送成功'
+              res.render("users",{title:"用户列表",datas:rows,msg:name});
+            }
+          })
+        }
+      });
+    }
+    //关闭连接池  防止刷新页面 又发送邮件
+    transport.close();
+  });
+});
+module.exports = router;
+
 
 router.get("/download",function(req,res,next){
   var file_url = 'F:/创世战车/包图网_106541矢量大数据时代数字风格背景/cpu.jpg';
