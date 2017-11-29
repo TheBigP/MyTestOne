@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+   <html>
+     <head>
+       <script src="../build/react.js"></script>
+       <script src="../build/react-dom.js"></script>
+       <script src="../build/browser.min.js"></script>
+       <link href="css/bootstrap.min.css" rel="stylesheet">
+       <style>
+           .child {
+               border-color: black;
+               border: 1px solid;
+               height: 200px;
+           }
+           .parent {
+               height: 400px;
+               border: 3px solid;
+           }
+       </style>
+     </head>
+     <body>
+
+<!--
+       <h1><span class="label label-info">DEMO 4</span></h1>
+       <br><br><br>
+
+
+       <div class="well div" id="well">
+
+       </div>
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/react.js"></script>
+       <script src="js/react-dom.js"></script>
+       <script src="js/browser.min.js"></script>
+
+       <script type="text/babel">
+       var Text = React.createClass({
+           getInitialState: function() {
+               return {cur_time: 0};
+           },
+           request: function() {
+               $.ajax({
+                   type: "GET",
+                   url: "http://xxx",
+                   success: function(data){
+                       this.setState({cur_time: data.timestamp});
+                   }.bind(this),
+                   complete: function(){
+                       this.setState({cur_time: Date.parse(new Date()) / 1000});
+                   }.bind(this)
+               });
+           },
+           componentDidMount: function(){
+               setInterval(this.request, 1000);
+           },
+           render: function() {
+               return (
+                   <div className="col-xs-12">
+                       当前时间{this.state.cur_time}
+                       <div className={ this.state.cur_time % 2 == 0?"hidden": "col-xs-6 alert alert-success"}>
+                           <span>最后一位奇数</span>
+                       </div>
+                       <div className={ this.state.cur_time % 2 != 0?"hidden": "col-xs-6 alert alert-danger"}>
+                           <span>最后一位偶数</span>
+                       </div>
+                   </div>
+               );
+           }
+       });
+
+       ReactDOM.render(
+           <Text></Text>,
+           document.getElementById('well')
+       );
+
+       </script> -->
+
+       <h1><span class="label label-info">DEMO 5</span></h1>
+       <br><br><br>
+
+
+       <div id="well">
+
+       </div>
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/react.js"></script>
+       <script src="js/react-dom.js"></script>
+       <script src="js/browser.min.js"></script>
+
+       <script type="text/babel">
+       var Child = React.createClass({
+           getInitialState: function() {
+               return {color: ""};
+           },
+           changeColor: function(e) {
+               this.setState({color: e.target.getAttribute("data-color")});
+           },
+           render: function() {
+               return (
+                   <div style={{backgroundColor: this.state.color}} className="col-xs-5 col-xs-offset-1 child">
+                       <br/>
+                       <ul className="list-inline">
+                           <li><a href="#" data-color="#286090" className="btn btn-primary" onClick={this.props.parentChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#31b0d5" className="btn btn-info" onClick={this.props.parentChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#c9302c" className="btn btn-danger" onClick={this.props.parentChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#ec971f" className="btn btn-warning" onClick={this.props.parentChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#e6e6e6" className="btn btn-default" onClick={this.props.parentChangeColor}>&nbsp;</a></li>
+                       </ul>
+                   </div>
+               );
+           }
+       });
+
+       var Parent = React.createClass({
+           getInitialState: function() {
+               return {color: ""};
+           },
+           changeColor: function(e) {
+               this.setState({color: e.target.getAttribute("data-color")});
+           },
+           child1ChangeColor: function(e) {
+               this.refs["child1"].changeColor(e);
+           },
+           child2ChangeColor: function(e) {
+               this.refs["child2"].changeColor(e);
+           },
+           render: function() {
+               return (
+                   <div style={{backgroundColor: this.state.color}} className="col-xs-10 col-xs-offset-1 parent">
+                       <br/>
+                       <ul className="list-inline">
+                           <li>对应第一个child</li>
+                           <li><a href="#" data-color="#286090" className="btn btn-primary" onClick={this.child1ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#31b0d5" className="btn btn-info" onClick={this.child1ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#c9302c" className="btn btn-danger" onClick={this.child1ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#ec971f" className="btn btn-warning" onClick={this.child1ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#e6e6e6" className="btn btn-default" onClick={this.child1ChangeColor}>&nbsp;</a></li>
+                       </ul>
+                       <ul className="list-inline">
+                           <li>对应第二个child</li>
+                           <li><a href="#" data-color="#286090" className="btn btn-primary" onClick={this.child2ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#31b0d5" className="btn btn-info" onClick={this.child2ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#c9302c" className="btn btn-danger" onClick={this.child2ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#ec971f" className="btn btn-warning" onClick={this.child2ChangeColor}>&nbsp;</a></li>
+                           <li><a href="#" data-color="#e6e6e6" className="btn btn-default" onClick={this.child2ChangeColor}>&nbsp;</a></li>
+                       </ul>
+                       <hr/>
+
+                       <Child ref="child1" parentChangeColor={this.changeColor} />
+                       <Child ref="child2" parentChangeColor={this.changeColor} />
+                   </div>
+               );
+           }
+       });
+
+
+       ReactDOM.render(
+           <Parent/>,
+           document.getElementById('well')
+       );
+
+       </script>
+
+
+       <!-- <h1><span class="label label-info">DEMO 3</span></h1>
+              <br><br><br>
+
+
+              <div class="well" id="well">
+
+              </div>
+
+              <script src="js/jquery.min.js"></script>
+              <script src="js/react.js"></script>
+              <script src="js/react-dom.js"></script>
+              <script src="js/browser.min.js"></script>
+
+              <script type="text/babel">
+              var Text = React.createClass({
+                  getInitialState: function() {
+                      return {name: "react"};
+                  },
+                  keyUp: function(e){
+                      this.setState({name: e.target.value});
+                      console.log(this.state.name);
+                  },
+                  render: function() {
+                      return (
+                          <div className="a">
+                              大家好，我是用{this.state.name}渲染出来的！
+                              <input onKeyUp={this.keyUp} />
+                          </div>
+                      );
+                  }
+              });
+
+              ReactDOM.render(
+                  <Text></Text>,
+                  document.getElementById('well')
+              );
+
+              </script> -->
+
+
+       <!-- <h1><span class="label label-info">DEMO 2</span></h1>
+       <br><br><br>
+
+
+       <div class="well" id="well">
+
+       </div>
+
+       <script src="js/jquery.min.js"></script>
+       <script src="js/react.js"></script>
+       <script src="js/react-dom.js"></script>
+       <script src="js/browser.min.js"></script>
+
+       <script type="text/babel">
+       var Text = React.createClass({
+           render: function() {
+               return (
+                   <div className="a">
+                       大家好，我是用{this.props.name}渲染出来的！age={this.props.age}
+                   </div>
+               );
+           }
+       });
+
+       ReactDOM.render(
+           <Text name="react" age={181}></Text>,
+           document.getElementById('well')
+       );
+
+       </script> -->
+     </body>
+   </html>
