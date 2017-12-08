@@ -25,11 +25,16 @@ blogSchema.add({ author:String,body:String});
 // new Schema({mixed:{}});
 var blogModel = mongoose.model('Blog',blogSchema);
 
-blogModel.find({$where: 'this.comments.length > 10 || this.authorlength > 5'},function(err,docs){
+blogModel.find({title: {$in: ['Mongoose', 'Mongodb', 'Nodejs']}},function(err,docs){
   if(err) console.log(err);
-  console.log('search+where+++++'+docs);
+  console.log("search ++++++++"+docs);
 });
-blogModel.$where(function(){return this.comments.length > 10 || this.author.length > 5 ;});
+
+// blogModel.find({$where: 'this.comments.length > 10 || this.authorlength > 5'},function(err,docs){
+//   if(err) console.log(err);
+//   console.log('search+where+++++'+docs);
+// });
+// blogModel.$where(function(){return this.comments.length > 10 || this.author.length > 5 ;});
 
 // blogModel.find({ title: { $regex: "Mongoose.+","$options":"i"}},function(err,docs){
 //   if(err) console.log(err);
