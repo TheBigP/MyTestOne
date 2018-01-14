@@ -96,8 +96,39 @@ router.post("/addEmail",upload.single('other'),function(req,res,next){
 });
 module.exports = router;
 
+router.get('get/upload/:filename',function(req,res,next){
+  var filename = req.params.filename;
+  var filePath = path.join(__dirname,filename);
+  var stats = fs.statSync(filePath)；
+  if(stats.isFile()){
+    res.set({
+      'content-Type': 'application/octet-stream',
+      'Content-Disposition': 'attachment; filename='+fileName,
+      'Content-Length': stats.size
+    });
+    fs.createReadStream(filePath).pipe(res);
+  }else {
+    res.end(404);
+  }
+})
 
 router.get("/download",function(req,res,next){
+  var filePath = path.join(__dirname, './');
+  fs.readdir(filePath,function(err, results){
+    if(err) throw err;
+    if(results.length>0){
+      var files = []
+      results.forEach(function(file){
+        if(fs.statSync(path.join(filePath, file)).isFile()){
+          files.push(file);
+        }
+      })
+      res.render('files',{files:files});
+    } else {
+      res.end('当前目录下没有文件');
+    }
+  });
+
   var file_url = 'F:/创世战车/包图网_106541矢量大数据时代数字风格背景/cpu.jpg';
   var DOWNLOAD_DIR = './downloads/';
 
